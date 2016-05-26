@@ -2,21 +2,10 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 from datetime import datetime
-import statistics
-import os
-import psycopg2
-import urlparse
+#import statistics
+#import os
+#import psycopg2
 
-urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
-
-conn = psycopg2.connect(
-    database=url.path[1:],
-    user=url.username,
-    password=url.password,
-    host=url.hostname,
-    port=url.port
-)
 
 
 app = Flask(__name__)
