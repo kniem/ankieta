@@ -10,8 +10,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
 heroku=Heroku(app)
 db = SQLAlchemy(app)
 
