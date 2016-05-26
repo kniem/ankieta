@@ -45,7 +45,7 @@ class Formdata(db.Model):
 db.create_all()
 
 def count_answers(arr):
-    return [['Nie mam pojęcia', arr.count(0), 'Jednak nie wiem', arr.count(1), 'Wiem', arr.count(2)]]
+    return [['Nie mam pojęcia', arr.count(0)], ['Jednak nie wiem', arr.count(1)], ['Wiem', arr.count(2)]]
 
 @app.route("/")
 def welcome():
