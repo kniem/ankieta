@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 from datetime import datetime
-#import statistics
+import statistics
 #import os
 #import psycopg2
 
