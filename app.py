@@ -121,12 +121,12 @@ def save():
     q8 = int(request.form['q8']) + int(request.form['ans8test'])
     q9 = int(request.form['q9']) + int(request.form['ans9test'])
     q10 = int(request.form['q10']) + int(request.form['ans10test'])
-    return redirect("/")
+
     # Save the data
     fd = Formdata(age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     db.session.add(fd)
     db.session.commit()
-
+    return redirect("/")
 
 
 
