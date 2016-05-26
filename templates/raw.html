@@ -12,13 +12,17 @@
     <tr>
         <th>#</th>
         <th>Created at</th>
-        <th>First Name</th>
-        <th>Email</th>
         <th>Age</th>
-        <th>Income</th>
-        <th>Satisfaction</th>
-        <th>Python</th>
-        <th>Flask</th>
+        <th>Q1</th>
+        <th>Q2</th>
+        <th>Q3</th>
+        <th>Q4</th>
+        <th>Q5</th>
+        <th>Q6</th>
+        <th>Q7</th>
+        <th>Q8</th>
+        <th>Q9</th>
+        <th>Q10</th>
     </tr>
     </thead>
 
@@ -27,13 +31,17 @@
     <tr>
         <td>{{ element.id }}</td>
         <td>{{ element.created_at }}</td>
-        <td>{{ element.firstname }}</td>
-        <td>{{ element.email }}</td>
         <td>{{ element.age }}</td>
-        <td>{{ element.income }}</td>
-        <td>{{ element.satisfaction }}</td>
         <td>{{ element.q1 }}</td>
         <td>{{ element.q2 }}</td>
+        <td>{{ element.q3 }}</td>
+        <td>{{ element.q4 }}</td>
+        <td>{{ element.q5 }}</td>
+        <td>{{ element.q6 }}</td>
+        <td>{{ element.q7 }}</td>
+        <td>{{ element.q8 }}</td>
+        <td>{{ element.q9 }}</td>
+        <td>{{ element.q10 }}</td>
 
     </tr>
     {% endfor %}

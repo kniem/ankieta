@@ -6,8 +6,6 @@ import statistics
 #import os
 #import psycopg2
 
-
-
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
@@ -16,28 +14,38 @@ heroku=Heroku(app)
 db = SQLAlchemy(app)
 
 class Formdata(db.Model):
-    __tablename__ = 'formdata'
+    __tablename__ = 'poll_data'
     id = db.Column(db.Integer, primary_key=True)
     created_at = db.Column(db.DateTime, default=datetime.now)
-    firstname = db.Column(db.String, nullable=False)
-    email = db.Column(db.String)
-    age = db.Column(db.Integer)
-    income = db.Column(db.Integer)
-    satisfaction = db.Column(db.Integer)
+    age = db.Column(db.Integer, nullable=False)
     q1 = db.Column(db.Integer)
     q2 = db.Column(db.Integer)
+    q3 = db.Column(db.Integer)
+    q4 = db.Column(db.Integer)
+    q5 = db.Column(db.Integer)
+    q6 = db.Column(db.Integer)
+    q7 = db.Column(db.Integer)
+    q8 = db.Column(db.Integer)
+    q9 = db.Column(db.Integer)
+    q10 = db.Column(db.Integer)
 
-    def __init__(self, firstname, email, age, income, satisfaction, q1, q2):
-        self.firstname = firstname
-        self.email = email
+    def __init__(self, age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
         self.age = age
-        self.income = income
-        self.satisfaction = satisfaction
         self.q1 = q1
         self.q2 = q2
+        self.q3 = q3
+        self.q4 = q4
+        self.q5 = q5
+        self.q6 = q6
+        self.q7 = q7
+        self.q8 = q8
+        self.q9 = q9
+        self.q10 = q10
 
 db.create_all()
 
+def count_answers(arr):
+    return [['Nie mam pojęcia', arr.count(0), 'Jednak nie wiem', arr.count(1), 'Wiem', arr.count(2)]]
 
 @app.route("/")
 def welcome():
@@ -58,48 +66,64 @@ def show_result():
     fd_list = db.session.query(Formdata).all()
 
     # Some simple statistics for sample questions
-    satisfaction = []
+    age = []
     q1 = []
     q2 = []
+    q3 = []
+    q4 = []
+    q5 = []
+    q6 = []
+    q7 = []
+    q8 = []
+    q9 = []
+    q10 = []
+
     for el in fd_list:
-        satisfaction.append(int(el.satisfaction))
+        age.append(int(el.age))
         q1.append(int(el.q1))
         q2.append(int(el.q2))
+        q3.append(int(el.q3))
+        q4.append(int(el.q4))
+        q5.append(int(el.q5))
+        q6.append(int(el.q6))
+        q7.append(int(el.q7))
+        q8.append(int(el.q8))
+        q9.append(int(el.q9))
+        q10.append(int(el.q10))
 
-    if len(satisfaction) > 0:
-        mean_satisfaction = statistics.mean(satisfaction)
-    else:
-        mean_satisfaction = 0
 
-    if len(q1) > 0:
-        mean_q1 = statistics.mean(q1)
-    else:
-        mean_q1 = 0
+    age_data = [['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45', age.count(4), '>=46', age.count(5)]]
+    q1_data = count_answers(q1)
+    q2_data = count_answers(q2)
+    q3_data = count_answers(q3)
+    q4_data = count_answers(q4)
+    q5_data = count_answers(q5)
+    q6_data = count_answers(q6)
+    q7_data = count_answers(q7)
+    q8_data = count_answers(q8)
+    q9_data = count_answers(q9)
+    q10_data = count_answers(q10)
 
-    if len(q2) > 0:
-        mean_q2 = statistics.mean(q2)
-    else:
-        mean_q2 = 0
-
-    # Prepare data for google charts
-    data = [['Satisfaction', mean_satisfaction], ['Python skill', mean_q1], ['Flask skill', mean_q2]]
-
-    return render_template('result.html', data=data)
+    return render_template('result.html', q1_data=q1_data)
 
 
 @app.route("/save", methods=['POST'])
 def save():
     # Get data from FORM
-    firstname = request.form['firstname']
-    email = request.form['email']
     age = request.form['age']
-    income = request.form['income']
-    satisfaction = request.form['satisfaction']
-    q1 = request.form['q1']
-    q2 = request.form['q2']
+    q1 = int(request.form['q1']) + int(request.form['ans1test'])
+    q2 = int(request.form['q2']) + int(request.form['ans2test'])
+    q3 = int(request.form['q3']) + int(request.form['ans3test'])
+    q4 = int(request.form['q4']) + int(request.form['ans4test'])
+    q5 = int(request.form['q5']) + int(request.form['ans5test'])
+    q6 = int(request.form['q6']) + int(request.form['ans6test'])
+    q7 = int(request.form['q7']) + int(request.form['ans7test'])
+    q8 = int(request.form['q8']) + int(request.form['ans8test'])
+    q9 = int(request.form['q9']) + int(request.form['ans9test'])
+    q10 = int(request.form['q10']) + int(request.form['ans10test'])
 
     # Save the data
-    fd = Formdata(firstname, email, age, income, satisfaction, q1, q2)
+    fd = Formdata(age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     db.session.add(fd)
     db.session.commit()
 
