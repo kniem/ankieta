@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
-import statistics
 from flask.ext.heroku import Heroku
+from datetime import datetime
+#import statistics
+
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
