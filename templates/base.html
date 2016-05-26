@@ -58,9 +58,9 @@
     <script src="static/js/bootstrap.min.js"></script>
     <script>
         $(function() {
-            $("input[type='radio']").click(function () {
-                var name = $(this).attr('name');
-                $(name + 'test').css('display', ($(this).val() == "3" || $(this).val() == "4") ? 'block':'none');
+            $("input:radio").click(function () {
+                var name = $(this).attr('name') + 'test';
+                $("#"+name).css('display', ($(this).val() == "3" || $(this).val() == "4") ? 'block':'none');
             });
         });
       </script>

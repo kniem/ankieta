@@ -1,6 +1,7 @@
 body {
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  font-family: Montserrat, sans-serif;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -17,3 +18,13 @@ body {
   width: auto;
 }
 
+.box {
+opacity: 1;
+transition: opacity 1s, height 0;
+}
+
+.hidden {
+opacity: 0;
+transition: opacity 1s, height 0 1s;
+height: 0;
+}
