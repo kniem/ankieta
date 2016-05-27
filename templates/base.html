@@ -62,12 +62,22 @@
             $("input:radio").click(function () {
                 var name = $(this).attr('name');
                 $("#"+name+"test").css('display', ($(this).val() == "1") ? 'block':'none');
-                
+                if(name.substring(0,1) == 'q'){
+                		if(name.length == 3) {var errid = 'errq10';}
+                    else {var errid = 'errq' + name.substring(1,2);}
+                }
+                else{
+                		if(name.length == 9) {var errid = 'erra10';}
+                    else {var errid = 'erra' + name.substring(3,4);}
+                }
+                if ($('input[name="' + name + '"]:checked').length != 0) {
+                    $("#"+errid).html("");
+                }
             });
         });
 
         $(function () {
-            function validateForm() {
+            $('form').submit(function (){
                 //Make groups
                 var names = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
                 var qnumbers = [];
@@ -88,13 +98,11 @@
                             qnumbers.push(i+1);
                     }
                 });
-                alert(qnumbers);
                 //check for error
 
                 $.each(qnumbers, function (i, name) {
                     if ($('input[name="ans' + name + 'test"]:checked').length == 0) {
                         radioError = true;
-                        alert(qnumbers[i]);
                         var errid = 'erra' + qnumbers[i];
                         $("#"+errid).html("Hello World");
                     }

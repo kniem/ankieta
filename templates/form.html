@@ -9,7 +9,7 @@
     <h2>Wypełnienienie nie powinno zająć więcej niż 5 minut</h2>
 </div>
 
-<form role="form" action="/save" method="post" onsubmit="return validateForm()">
+<form role="form" action="/save" method="post">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
@@ -29,7 +29,7 @@
         <!-- PIERWSZE PYTANIE -->
         <div class="row">
             <div class="col-md-6 form-group" id="q1">Czy znasz ten skrót "ASAP"?
-                <div class="err-msg" id="errq1"></div>
+                <div class="alert alert-danger" id="errq1"></div>
 
                     <div class="radio">
                       <label>
@@ -52,7 +52,7 @@
 
             </div>
             <div class="col-md-6" id="q1test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra1"></div>
+                <div class="alert alert-danger" id="erra1"></div>
 
                 <div class="radio">
                       <label>
@@ -78,7 +78,7 @@
         <!-- DRUGIE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q2">Czy znasz ten skrót "TL;DR"?
-                <div class="err-msg" id="errq2"></div>
+                <div class="alert alert-danger" id="errq2"></div>
 
                     <div class="radio">
                       <label>
@@ -101,7 +101,7 @@
 
             </div>
             <div class="col-md-6" id="q2test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra2"></div>
+                <div class="alert alert-danger" id="erra2"></div>
 
                 <div class="radio">
                       <label>
@@ -127,7 +127,7 @@
         <!-- TRZECIE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q3">Czy znasz ten skrót "DM me"?
-                <div class="err-msg" id="errq3"></div>
+                <div class="alert alert-danger" id="errq3"></div>
 
                     <div class="radio">
                       <label>
@@ -150,7 +150,7 @@
 
             </div>
             <div class="col-md-6" id="q3test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra3"></div>
+                <div class="alert alert-danger" id="erra3"></div>
 
                 <div class="radio">
                       <label>
@@ -176,7 +176,7 @@
         <!-- CZWARTE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q4">Czy znasz ten skrót "IDK"?
-                <div class="err-msg" id="errq4"></div>
+                <div class="alert alert-danger" id="errq4"></div>
 
                     <div class="radio">
                       <label>
@@ -199,7 +199,7 @@
 
             </div>
             <div class="col-md-6" id="q4test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra4"></div>
+                <div class="alert alert-danger" id="erra4"></div>
 
                 <div class="radio">
                       <label>
@@ -225,7 +225,7 @@
         <!-- PIĄTE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q5">Czy znasz ten skrót "ELI5"?
-                <div class="err-msg" id="errq5"></div>
+                <div class="alert alert-danger" id="errq5"></div>
 
                     <div class="radio">
                       <label>
@@ -248,7 +248,7 @@
 
             </div>
             <div class="col-md-6" id="q5test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra5"></div>
+                <div class="alert alert-danger" id="erra5"></div>
 
                 <div class="radio">
                       <label>
@@ -274,7 +274,7 @@
         <!-- SZÓSTE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q6">Czy znasz ten skrót "NMZC"?
-                <div class="err-msg" id="errq6"></div>
+                <div class="alert alert-danger" id="errq6"></div>
 
                     <div class="radio">
                       <label>
@@ -297,7 +297,7 @@
 
             </div>
             <div class="col-md-6" id="q6test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra6"></div>
+                <div class="alert alert-danger" id="erra6"></div>
 
                 <div class="radio">
                       <label>
@@ -323,7 +323,7 @@
         <!-- SIÓDME PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q7">Czy znasz ten skrót "JBC"?
-                <div class="err-msg" id="errq7"></div>
+                <div class="alert alert-danger" id="errq7"></div>
 
                     <div class="radio">
                       <label>
@@ -346,7 +346,7 @@
 
             </div>
             <div class="col-md-6" id="q7test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra7"></div>
+                <div class="alert alert-danger" id="erra7"></div>
 
                 <div class="radio">
                       <label>
@@ -372,7 +372,7 @@
         <!-- ÓSME PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q8">Czy znasz ten skrót "JJ"?
-                <div class="err-msg" id="errq8"></div>
+                <div class="alert alert-danger" id="errq8"></div>
 
                     <div class="radio">
                       <label>
@@ -395,7 +395,7 @@
 
             </div>
             <div class="col-md-6" id="q8test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra8"></div>
+                <div class="alert alert-danger" id="erra8"></div>
 
                 <div class="radio">
                       <label>
@@ -421,7 +421,7 @@
         <!-- DZIEWIĄTE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q9">Czy znasz ten skrót "OCB"?
-                <div class="err-msg" id="errq9"></div>
+                <div class="alert alert-danger" id="errq9"></div>
 
                     <div class="radio">
                       <label>
@@ -444,7 +444,7 @@
 
             </div>
             <div class="col-md-6" id="q9test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra9"></div>
+                <div class="alert alert-danger" id="erra9"></div>
 
                 <div class="radio">
                       <label>
@@ -470,7 +470,7 @@
         <!-- DZIESIĄTE PYTANIE -->
          <div class="row">
             <div class="col-md-6 form-group" id="q10">Czy znasz ten skrót "ZW"?
-                <div class="err-msg" id="errq10"></div>
+                <div class="alert alert-danger" id="errq10"></div>
 
                     <div class="radio">
                       <label>
@@ -493,7 +493,7 @@
 
             </div>
             <div class="col-md-6" id="q10test" style="display:none">Podaj znaczenie tego skrótu:
-                <div class="err-msg" id="erra10"></div>
+                <div class="alert alert-danger" id="erra10"></div>
 
                 <div class="radio">
                       <label>
