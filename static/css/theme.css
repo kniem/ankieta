@@ -28,3 +28,10 @@ opacity: 0;
 transition: opacity 1s, height 0 1s;
 height: 0;
 }
+
+.err-msg {
+color: #cc1111;
+font-weight: bold;
+padding-top: 10px;
+padding-bottom: 10px;
+}
