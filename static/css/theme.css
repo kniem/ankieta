@@ -19,12 +19,17 @@ body {
 }
 
 .err-msg {
-color: #cc1111;
-font-weight: bold;
-padding-top: 10px;
-padding-bottom: -5px;
+    color: #cc1111;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: -5px;
 }
 
 .row {
-border-bottom: solid 2px #226;
+    border-bottom: solid 2px #ccd;
+    padding-top: 20px;
+}
+
+.question-font{
+    font-weight: bold;
 }
