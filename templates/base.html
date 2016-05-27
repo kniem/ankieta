@@ -62,17 +62,7 @@
             $("input:radio").click(function () {
                 var name = $(this).attr('name');
                 $("#"+name+"test").css('display', ($(this).val() == "1") ? 'block':'none');
-                if(name.substring(0,1) == 'q'){
-                		if(name.length == 3) {var errid = 'errq10';}
-                    else {var errid = 'errq' + name.substring(1,2);}
-                }
-                else{
-                		if(name.length == 9) {var errid = 'erra10';}
-                    else {var errid = 'erra' + name.substring(3,4);}
-                }
-                if ($('input[name="' + name + '"]:checked').length != 0) {
-                    $("#"+errid).html("");
-                }
+                
             });
         });
 
