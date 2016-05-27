@@ -33,9 +33,3 @@ body {
 .question-font{
     font-weight: bold;
 }
-
-label {
-  width: 200px;
-  border-radius: 3px;
-  border: 1px solid #D1D3D4
-}
