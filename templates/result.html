@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>Wynik</h1>
+    <h1>Wyniki</h1>
 </div>
 
 <div class="container-fluid">
@@ -27,6 +27,9 @@
     <div class="row">
         <div class="col-md-6"><div id="donut9_div" style="width: 500px; height: 300px;"></div></div>
         <div class="col-md-6"><div id="donut10_div" style="width: 500px; height: 300px;"></div></div>
+    </div>
+    <div class="row"><h3>Wynik testu w zależności od wieku</h3>
+        <div id="bar_mean_div" style="width: 500px; height: 300px;"></div>
     </div>
 </div>
 
@@ -144,7 +147,30 @@
         };
     var chart10 = new google.visualization.PieChart(document.getElementById('donut10_div'));
         chart10.draw(data10, options10);
+
+    var databar = new google.visualization.DataTable();
+    databar.addColumn('string', 'Grupy wiekowe');
+    databar.addColumn('number', 'Średni wynik');
+    databar.addRows( {{ mean_data|tojson }} );
+
+    var optionsbar = {
+          title: 'Wyniki w poszczególnych grupach wiekowych',
+          bar: {groupWidth: "95%"},
+        };
+
+    var viewbar = new google.visualization.DataView(databar);
+    viewbar.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+    var chartbar = new google.visualization.BarChart(document.getElementById("bar_mean_div"));
+      chart.draw(viewbar, optionsbar);
   }
+
+
 
 
 </script>
