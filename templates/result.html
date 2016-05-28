@@ -35,153 +35,118 @@
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q1_data|tojson }} );
-    var options = {
+    var data1 = new google.visualization.DataTable();
+    data1.addColumn('string', 'Znajomość');
+    data1.addColumn('number', 'Odpowiedzi');
+    data1.addRows( {{ q1_data|tojson }} );
+    var options1 = {
           title: 'Pytanie 1 - ASAP',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut1_div'));
-        chart.draw(data, options);
-  }
+    var chart1 = new google.visualization.PieChart(document.getElementById('donut1_div'));
+        chart1.draw(data1, options1);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q2_data|tojson }} );
-    var options = {
+    var data2 = new google.visualization.DataTable();
+    data2.addColumn('string', 'Znajomość');
+    data2.addColumn('number', 'Odpowiedzi');
+    data2.addRows( {{ q2_data|tojson }} );
+    var options2 = {
           title: 'Pytanie 2 - TL;DR',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut2_div'));
-        chart.draw(data, options);
-  }
+    var chart2 = new google.visualization.PieChart(document.getElementById('donut2_div'));
+        chart2.draw(data2, options2);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q3_data|tojson }} );
-    var options = {
+    var data3 = new google.visualization.DataTable();
+    data3.addColumn('string', 'Znajomość');
+    data3.addColumn('number', 'Odpowiedzi');
+    data3.addRows( {{ q3_data|tojson }} );
+    var options3 = {
           title: 'Pytanie 3 - DM me',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut3_div'));
-        chart.draw(data, options);
-  }
+    var chart3 = new google.visualization.PieChart(document.getElementById('donut3_div'));
+        chart3.draw(data3, options);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q4_data|tojson }} );
-    var options = {
+    var data4 = new google.visualization.DataTable();
+    data4.addColumn('string', 'Znajomość');
+    data4.addColumn('number', 'Odpowiedzi');
+    data4.addRows( {{ q4_data|tojson }} );
+    var options4 = {
           title: 'Pytanie 4 - IDK',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut4_div'));
-        chart.draw(data, options);
-  }
+    var chart4 = new google.visualization.PieChart(document.getElementById('donut4_div'));
+        chart4.draw(data4, options4);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q5_data|tojson }} );
-    var options = {
+    var data5 = new google.visualization.DataTable();
+    data5.addColumn('string', 'Znajomość');
+    data5.addColumn('number', 'Odpowiedzi');
+    data5.addRows( {{ q5_data|tojson }} );
+    var options5 = {
           title: 'Pytanie 5 - ELI5',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut5_div'));
-        chart.draw(data, options);
-  }
+    var chart5 = new google.visualization.PieChart(document.getElementById('donut5_div'));
+        chart5.draw(data5, options5);
 
-
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q6_data|tojson }} );
-    var options = {
+    var data6 = new google.visualization.DataTable();
+    data6.addColumn('string', 'Znajomość');
+    data6.addColumn('number', 'Odpowiedzi');
+    data6.addRows( {{ q6_data|tojson }} );
+    var options6 = {
           title: 'Pytanie 6 - NMZC',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut6_div'));
-        chart.draw(data, options);
-  }
+    var chart6 = new google.visualization.PieChart(document.getElementById('donut6_div'));
+        chart6.draw(data6, options6);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q7_data|tojson }} );
-    var options = {
+    var data7 = new google.visualization.DataTable();
+    data7.addColumn('string', 'Znajomość');
+    data7.addColumn('number', 'Odpowiedzi');
+    data7.addRows( {{ q7_data|tojson }} );
+    var options7 = {
           title: 'Pytanie 7 - JBC',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut7_div'));
-        chart.draw(data, options);
-  }
+    var chart7 = new google.visualization.PieChart(document.getElementById('donut7_div'));
+        chart7.draw(data7, options7);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q8_data|tojson }} );
-    var options = {
+    var data8 = new google.visualization.DataTable();
+    data8.addColumn('string', 'Znajomość');
+    data8.addColumn('number', 'Odpowiedzi');
+    data8.addRows( {{ q8_data|tojson }} );
+    var options8 = {
           title: 'Pytanie 8 - JJ',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut8_div'));
-        chart.draw(data, options);
-  }
+    var chart8 = new google.visualization.PieChart(document.getElementById('donut8_div'));
+        chart8.draw(data8, options8);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q9_data|tojson }} );
-    var options = {
+    var data9 = new google.visualization.DataTable();
+    data9.addColumn('string', 'Znajomość');
+    data9.addColumn('number', 'Odpowiedzi');
+    data9.addRows( {{ q9_data|tojson }} );
+    var options9 = {
           title: 'Pytanie 9 - OCB',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut9_div'));
-        chart.draw(data, options);
-  }
+    var chart9 = new google.visualization.PieChart(document.getElementById('donut9_div'));
+        chart9.draw(data9, options9);
 
-  google.charts.load("current", {packages:["corechart"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Znajomość');
-    data.addColumn('number', 'Odpowiedzi');
-    data.addRows( {{ q10_data|tojson }} );
-    var options = {
+    var data10 = new google.visualization.DataTable();
+    data10.addColumn('string', 'Znajomość');
+    data10.addColumn('number', 'Odpowiedzi');
+    data10.addRows( {{ q10_data|tojson }} );
+    var options10 = {
           title: 'Pytanie 10 - ZW',
           pieHole: 0.4,
         };
-    var chart = new google.visualization.PieChart(document.getElementById('donut10_div'));
-        chart.draw(data, options);
+    var chart10 = new google.visualization.PieChart(document.getElementById('donut10_div'));
+        chart10.draw(data10, options10);
   }
+
+
 </script>
 
 {% endblock %}
