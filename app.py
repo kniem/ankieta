@@ -132,13 +132,13 @@ def show_result():
     q9_data = count_answers(q9)
     q10_data = count_answers(q10)
 
-    mean_data_vector = mean_in_groups(age, score)
-    mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
-                 ['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
+    #mean_data_vector = mean_in_groups(age, score)
+    #mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
+                 #['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
 
     return render_template('result.html', q1_data=q1_data, q2_data=q2_data, q3_data=q3_data, q4_data=q4_data,
                            q5_data=q5_data, q6_data=q6_data, q7_data=q7_data, q8_data=q8_data, q9_data=q9_data,
-                           q10_data=q10_data, mean_data=mean_data)
+                           q10_data=q10_data)
 
 
 @app.route("/save", methods=['POST'])
