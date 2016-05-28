@@ -162,7 +162,7 @@ def save():
     db.session.add(fd)
     db.session.commit()
     flash('<strong>Dziękujemy</strong> za udział w ankiecie! Miłego dnia!')
-    return redirect((url_for('welcome')))
+    return redirect (url_for('welcome'))
 
 
 
