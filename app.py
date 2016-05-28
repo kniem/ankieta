@@ -132,7 +132,7 @@ def show_result():
     q9_data = count_answers(q9)
     q10_data = count_answers(q10)
 
-    #mean_data_vector = mean_in_groups(age, score)
+    mean_data_vector = mean_in_groups(age, score)
     #mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
                  #['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
 
