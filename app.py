@@ -118,7 +118,9 @@ def show_result():
         score.append = (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
                         int(el.q8) + int(el.q9) + int(el.q10))
 
-    age_data = [['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45', age.count(4), '>=46', age.count(5)]]
+    age_data = ([['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45',
+                  age.count(4), '>=46', age.count(5)]])
+
     q1_data = count_answers(q1)
     q2_data = count_answers(q2)
     q3_data = count_answers(q3)
@@ -131,8 +133,8 @@ def show_result():
     q10_data = count_answers(q10)
 
     mean_data_vector = mean_in_groups(age, score)
-    mean_data = [['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
-                 ['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]]
+    mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
+                 ['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
 
     return render_template('result.html', q1_data=q1_data, q2_data=q2_data, q3_data=q3_data, q4_data=q4_data,
                            q5_data=q5_data, q6_data=q6_data, q7_data=q7_data, q8_data=q8_data, q9_data=q9_data,
