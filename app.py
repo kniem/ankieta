@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.session import Session
 from flask.ext.heroku import Heroku
 from datetime import datetime
 import statistics
@@ -7,6 +8,9 @@ import statistics
 #import psycopg2
 
 app = Flask(__name__)
+app.config['SESSION_TYPE'] = 'memcached'
+app.config['SECRET_KEY'] = 'super secret key'
+sess = Session()
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
 #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
