@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 from datetime import datetime
@@ -161,6 +161,7 @@ def save():
     fd = Formdata(age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     db.session.add(fd)
     db.session.commit()
+    flash('Dziękujemy za udział w ankiecie! Miłego dnia!')
     return redirect("/")
 
 
