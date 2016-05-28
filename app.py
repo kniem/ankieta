@@ -101,7 +101,7 @@ def show_result():
     q8 = []
     q9 = []
     q10 = []
-    score = []
+    #score = []
 
     for el in fd_list:
         age.append(int(el.age))
@@ -115,11 +115,11 @@ def show_result():
         q8.append(int(el.q8))
         q9.append(int(el.q9))
         q10.append(int(el.q10))
-        score.append = (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
-                        int(el.q8) + int(el.q9) + int(el.q10))
+        #score.append = (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
+                        #int(el.q8) + int(el.q9) + int(el.q10))
 
-    age_data = ([['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45',
-                  age.count(4), '>=46', age.count(5)]])
+    #age_data = ([['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45',
+                  #age.count(4), '>=46', age.count(5)]])
 
     q1_data = count_answers(q1)
     q2_data = count_answers(q2)
