@@ -48,8 +48,10 @@ class Formdata(db.Model):
 
 db.create_all()
 
+
 def count_answers(arr):
     return [['Nie znam', arr.count(0)], ['Nie jest pewien', arr.count(1)], ['Wiem', arr.count(2)]]
+
 
 def check_answer(answer, correct_answer):
     if answer == correct_answer:
@@ -57,12 +59,13 @@ def check_answer(answer, correct_answer):
     else:
         return 0
 
+
 def mean_in_groups(ages, scores):
     aggregates = [0, 0, 0, 0, 0]
     tallies = [0, 0, 0, 0, 0]
     for index in range(len(ages)):
-        tallies[ages[index]] += 1
-        aggregates[ages[index]] += scores[index]
+        tallies[ages[index]-1] += 1
+        aggregates[ages[index]-1] += scores[index]
     for index in range(len(aggregates)):
         aggregates[index] /= tallies[index]
     means = aggregates
@@ -112,8 +115,8 @@ def show_result():
         q8.append(int(el.q8))
         q9.append(int(el.q9))
         q10.append(int(el.q10))
-        score.append = int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) + \
-                       int(el.q8) + int(el.q9) + int(el.q10)
+        score.append = (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
+                        int(el.q8) + int(el.q9) + int(el.q10))
 
     age_data = [['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45', age.count(4), '>=46', age.count(5)]]
     q1_data = count_answers(q1)
