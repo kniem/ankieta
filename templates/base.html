@@ -94,7 +94,7 @@
                         $("#"+errid).html("");
                         }
                     var value = $('input[name=' + name + ']:radio:checked').val()
-                    if(value == 1){
+                    if(value > 0){
                             qnumbers.push(i+1);
                     }
                 });
@@ -113,7 +113,7 @@
                 });
 
                 if(radioError) {
-                    alert("JAKIEGOŚ PYTANIA BRAK");
+                    alert("Nie wszystkie wymagane pola zostały uzupełnione!");
                     return false;
                 }
                 return true;
