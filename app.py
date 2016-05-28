@@ -49,7 +49,7 @@ class Formdata(db.Model):
 db.create_all()
 
 def count_answers(arr):
-    return [['Nie mam pojęcia', arr.count(0)], ['Jednak nie wiem', arr.count(1)], ['Wiem', arr.count(2)]]
+    return [['Nie znam', arr.count(0)], ['Nie jest pewien', arr.count(1)], ['Wiem', arr.count(2)]]
 
 def check_answer(answer, correct_answer):
     if answer == correct_answer:
@@ -165,7 +165,7 @@ def save():
     fd = Formdata(age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     db.session.add(fd)
     db.session.commit()
-    flash('<strong>Dziękujemy!</strong> Twoje odpowiedzi zostały przesłane do bazy danych')
+    flash('DZIĘKUJEMY! Twoje odpowiedzi zostały przesłane do bazy danych')
     return redirect(url_for('welcome'))
 
 
