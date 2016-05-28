@@ -161,8 +161,8 @@ def save():
     fd = Formdata(age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     db.session.add(fd)
     db.session.commit()
-    flash('<strong>Dziękujemy</strong> za udział w ankiecie! Miłego dnia!')
-    return redirect (url_for('welcome'))
+    flash('a')
+    return redirect(url_for('welcome'))
 
 
 
