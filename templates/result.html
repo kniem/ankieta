@@ -5,21 +5,25 @@
 
 <div class="page-header">
     <h1>Wynik</h1>
-    <div id="chart_div"></div>
+    <h3>Odpowiedzi na kolejne pytania</h3>
+    <div id="donut1_div" style="width: 500px; height: 300px;"></div>
 </div>
-<p><h2>Odpowiedzi na kolejne pytania</h2></p>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-  google.load('visualization', '1', {'packages':['corechart']});
-  google.setOnLoadCallback(drawChart);
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Znajomość');
     data.addColumn('number', 'Odpowiedzi');
     data.addRows( {{ q1_data|tojson }} );
-    var chart = new google.visualization.ColumnChart(
-            document.getElementById('chart_div'));
-    chart.draw(data, {legend: 'none', vAxis: {baseline: 0} });
+    var options = {
+          title: 'Pytanie 1 - ASAP',
+          pieHole: 0.4,
+        };
+    var chart = new google.visualization.PieChart(document.getElementById('donut1_div'));
+        chart.draw(data, options);
   }
 </script>
 
