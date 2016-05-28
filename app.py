@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request, redirect, flash, url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 from datetime import datetime
@@ -162,15 +162,11 @@ def save():
     db.session.add(fd)
     db.session.commit()
     flash('<strong>Dziękujemy</strong> za udział w ankiecie! Miłego dnia!')
-    return redirect("/")
+    return redirect((url_for('welcome')))
 
 
 
 if __name__ == "__main__":
-    app.secret_key = 'super secret key'
-    app.config['SESSION_TYPE'] = 'filesystem'
-
-    sess.init_app(app)
 
     app.debug = True
     app.run()
