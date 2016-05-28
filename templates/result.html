@@ -158,16 +158,8 @@
           bar: {groupWidth: "95%"},
         };
 
-    var viewbar = new google.visualization.DataView(databar);
-    viewbar.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
-
     var chartbar = new google.visualization.BarChart(document.getElementById("bar_mean_div"));
-      chartbar.draw(viewbar, optionsbar);
+      chartbar.draw(databar, optionsbar);
   }
 
 
