@@ -18,13 +18,18 @@ body {
   width: auto;
 }
 
-.box {
-opacity: 1;
-transition: opacity 1s, height 0;
+.err-msg {
+    color: #cc1111;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: -5px;
 }
 
-.hidden {
-opacity: 0;
-transition: opacity 1s, height 0 1s;
-height: 0;
+.row {
+    border-bottom: solid 2px #ccd;
+    padding-top: 20px;
+}
+
+.question-font{
+    font-weight: bold;
 }
