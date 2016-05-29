@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request, redirect
 from flask.ext.sqlalchemy import SQLAlchemy
-#from flask.ext.session import Session
 from flask.ext.heroku import Heroku
 from datetime import datetime
 import statistics
@@ -8,9 +7,6 @@ import statistics
 #import psycopg2
 
 app = Flask(__name__)
-app.config['SESSION_TYPE'] = 'memcached'
-app.config['SECRET_KEY'] = 'super secret key'
-sess = Session()
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/pre-registration'
 #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = 'True'
@@ -49,13 +45,7 @@ class Formdata(db.Model):
 db.create_all()
 
 def count_answers(arr):
-    return [['Nie znam', arr.count(0)], ['Nie jest pewien', arr.count(1)], ['Wiem', arr.count(2)]]
-
-def check_answer(answer, correct_answer):
-    if answer == correct_answer:
-        return 1
-    else:
-        return 0
+    return [['Nie mam pojęcia', arr.count(0), 'Jednak nie wiem', arr.count(1), 'Wiem', arr.count(2)]]
 
 @app.route("/")
 def welcome():
@@ -101,6 +91,7 @@ def show_result():
         q9.append(int(el.q9))
         q10.append(int(el.q10))
 
+
     age_data = [['<=15', age.count(1), '16-25', age.count(2), '26-35', age.count(3), '36-45', age.count(4), '>=46', age.count(5)]]
     q1_data = count_answers(q1)
     q2_data = count_answers(q2)
@@ -113,65 +104,32 @@ def show_result():
     q9_data = count_answers(q9)
     q10_data = count_answers(q10)
 
-    return render_template('result.html', q1_data=q1_data, q2_data=q2_data, q3_data=q3_data, q4_data=q4_data,
-                           q5_data=q5_data, q6_data=q6_data, q7_data=q7_data, q8_data=q8_data, q9_data=q9_data,
-                           q10_data=q10_data)
+    return render_template('result.html', q1_data=q1_data)
 
 
 @app.route("/save", methods=['POST'])
 def save():
     # Get data from FORM
     age = request.form['age']
-    q1 = int(request.form['q1'])
-    if q1:
-        q1 *= check_answer(request.form['ans1test'], 'a')
-
-    q2 = int(request.form['q2'])
-    if q2:
-        q2 *= check_answer(request.form['ans2test'], 'c')
-
-    q3 = int(request.form['q3'])
-    if q3:
-        q3 *= check_answer(request.form['ans3test'], 'c')
-
-    q4 = int(request.form['q4'])
-    if q4:
-        q4 *= check_answer(request.form['ans4test'], 'a')
-
-    q5 = int(request.form['q5'])
-    if q5:
-        q5 *= check_answer(request.form['ans5test'], 'b')
-
-    q6 = int(request.form['q6'])
-    if q6:
-        q6 *= check_answer(request.form['ans6test'], 'b')
-
-    q7 = int(request.form['q7'])
-    if q7:
-        q7 *= check_answer(request.form['ans7test'], 'a')
-
-    q8 = int(request.form['q8'])
-    if q8:
-        q8 *= check_answer(request.form['ans8test'], 'c')
-
-    q9 = int(request.form['q9'])
-    if q9:
-        q9 *= check_answer(request.form['ans9test'], 'b')
-
-    q10 = int(request.form['q10'])
-    if q10:
-        q10 *= check_answer(request.form['ans10test'], 'c')
+    q1 = int(request.form['q1']) + int(request.form['ans1test'])
+    q2 = int(request.form['q2']) + int(request.form['ans2test'])
+    q3 = int(request.form['q3']) + int(request.form['ans3test'])
+    q4 = int(request.form['q4']) + int(request.form['ans4test'])
+    q5 = int(request.form['q5']) + int(request.form['ans5test'])
+    q6 = int(request.form['q6']) + int(request.form['ans6test'])
+    q7 = int(request.form['q7']) + int(request.form['ans7test'])
+    q8 = int(request.form['q8']) + int(request.form['ans8test'])
+    q9 = int(request.form['q9']) + int(request.form['ans9test'])
+    q10 = int(request.form['q10']) + int(request.form['ans10test'])
 
     # Save the data
     fd = Formdata(age, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     db.session.add(fd)
     db.session.commit()
-    flash('DZIĘKUJEMY! Twoje odpowiedzi zostały przesłane do bazy danych')
-    return redirect(url_for('welcome'))
+    return redirect("/")
 
 
 
 if __name__ == "__main__":
-
     app.debug = True
     app.run()

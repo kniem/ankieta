@@ -15,7 +15,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="age">Podaj swój wiek:</label>
-                    <select class="form-control" name="age">
+                    <select name="age">
                         <option value="1">15 i mniej lat</option>
                         <option value="2">16 - 25 lat</option>
                         <option value="3">26 - 35 lat</option>
@@ -28,491 +28,311 @@
         <h3>Pytania</h3>
         <!-- PIERWSZE PYTANIE -->
         <div class="row">
-            <div class="col-md-6 form-group" id="q1"><span class="question-font">Czy znasz ten skrót "ASAP"?</span>
-                <div class="err-msg" id="errq1"></div>
+            <div class="col-md-6 form-group" id="q1">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q1" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q1" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q1" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q1" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q1" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q1" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q1test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra1"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans1test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans1test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans1test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q1test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans1test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans1test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans1test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans1test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- DRUGIE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q2"><span class="question-font">Czy znasz ten skrót "TL;DR"?</span>
-                <div class="err-msg" id="errq2"></div>
+            <div class="col-md-6 form-group" id="q2">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q2" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q2" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q2" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q2" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q2" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q2" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q2test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra2"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans2test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans2test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans2test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q2test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans2test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans2test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans2test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans2test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- TRZECIE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q3"><span class="question-font">Czy znasz ten skrót "DM me"?</span>
-                <div class="err-msg" id="errq3"></div>
+            <div class="col-md-6 form-group" id="q3">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q3" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q3" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q3" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q3" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q3" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q3" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q3test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra3"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans3test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans3test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans3test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q3test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans3test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans3test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans3test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans3test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- CZWARTE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q4"><span class="question-font">Czy znasz ten skrót "IDK"?</span>
-                <div class="err-msg" id="errq4"></div>
+            <div class="col-md-6 form-group" id="q4">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q4" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q4" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q4" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q4" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q4" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q4" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q4test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra4"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans4test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans4test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans4test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q4test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans4test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans4test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans4test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans4test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- PIĄTE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q5"><span class="question-font">Czy znasz ten skrót "ELI5"?</span>
-                <div class="err-msg" id="errq5"></div>
+            <div class="col-md-6 form-group" id="q5">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q5" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q5" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q5" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q5" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q5" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q5" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q5test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra5"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans5test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans5test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans5test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q5test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans5test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans5test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans5test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans5test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- SZÓSTE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q6"><span class="question-font">Czy znasz ten skrót "NMZC"?</span>
-                <div class="err-msg" id="errq6"></div>
+            <div class="col-md-6 form-group" id="q6">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q6" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q6" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q6" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q6" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q6" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q6" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q6test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra6"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans6test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans6test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans6test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q6test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans6test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans6test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans6test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans6test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- SIÓDME PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q7"><span class="question-font">Czy znasz ten skrót "JBC"?</span>
-                <div class="err-msg" id="errq7"></div>
+            <div class="col-md-6 form-group" id="q7">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q7" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q7" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q7" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q7" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q7" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q7" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q7test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra7"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans7test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans7test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans7test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q7test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans7test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans7test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans7test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans7test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- ÓSME PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q8"><span class="question-font">Czy znasz ten skrót "JJ"?</span>
-                <div class="err-msg" id="errq8"></div>
+            <div class="col-md-6 form-group" id="q8">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q8" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q8" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q8" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q8" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q8" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q8" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q8test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra8"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans8test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans8test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans8test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q8test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans8test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans8test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans8test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans8test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- DZIEWIĄTE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q9"><span class="question-font">Czy znasz ten skrót "OCB"?</span>
-                <div class="err-msg" id="errq9"></div>
+            <div class="col-md-6 form-group" id="q9">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q9" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q9" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q9" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q9" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q9" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q9" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q9test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra9"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans9test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans9test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans9test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q9test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans9test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans9test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans9test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans9test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
         <!-- DZIESIĄTE PYTANIE -->
          <div class="row">
-            <div class="col-md-6 form-group" id="q10"><span class="question-font">Czy znasz ten skrót "ZW"?</span>
-                <div class="err-msg" id="errq10"></div>
+            <div class="col-md-6 form-group" id="q10">Czy znasz ten skrót: " "?
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q10" value="0">
-                        Nigdy się nie spotkałam/em
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q10" value="1">
-                        Nie jestem pewna/y
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="q10" value="2">
-                        Tak, jestem tego pewna/y
-                      </label>
-                    </div>
+                    <label class="radio">
+                      <input type="radio" name="q10" value="0">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q10" value="1">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="q10" value="1">Na pewno wiem, co oznacza
+                    </label>
 
             </div>
-            <div class="col-md-6" id="q10test" style="display:none"><span class="question-font">Podaj znaczenie tego skrótu:</span>
-                <div class="err-msg" id="erra10"></div>
-
-                <div class="radio">
-                      <label>
-                        <input type="radio" name="ans10test" value="a">
-                        Odp. A
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans10test" value="b">
-                        Odp. B
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="ans10test" value="c">
-                        Odp. C
-                      </label>
-                    </div>
+            <div class="col-md-6" id="q10test" style="display:none">Podaj znaczenie tego skrótu:
+                <label class="radio">
+                      <input type="radio" name="ans10test" value="1">W życiu się nie spotkałam/em
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans10test" value="0">Spotkałam/em się, ale nie wiem co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans10test" value="0">Raczej wiem, co oznacza
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="ans10test" value="0" default>Na pewno wiem, co oznacza
+                    </label>
             </div>
         </div>
 
