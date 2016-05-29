@@ -25,6 +25,17 @@
 
     <body role="document">
 
+    {% with messages = get_flashed_messages() %}
+       {% if messages %}
+          {% for message in messages %}
+                <div class="alert alert-success fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+             {{ message }}
+                </div>
+          {% endfor %}
+       {% endif %}
+    {% endwith %}
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -60,10 +71,67 @@
     <script>
         $(function() {
             $("input:radio").click(function () {
-                var name = $(this).attr('name') + 'test';
-                $("#"+name).css('display', ($(this).val() == "1") ? 'block':'none');
+                var name = $(this).attr('name');
+                $("#"+name+"test").css('display', ($(this).val() > "0") ? 'block':'none');
+                if(name.substring(0,1) == 'q'){
+                		if(name.length == 3) {var errid = 'errq10';}
+                    else {var errid = 'errq' + name.substring(1,2);}
+                }
+                else{
+                		if(name.length == 9) {var errid = 'erra10';}
+                    else {var errid = 'erra' + name.substring(3,4);}
+                }
+                if ($('input[name="' + name + '"]:checked').length != 0) {
+                    $("#"+errid).html("");
+                }
             });
         });
+
+        $(function () {
+            $('form').submit(function (){
+                //Make groups
+                var names = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'];
+                var qnumbers = [];
+
+                var radioError = false;
+                $.each(names, function (i, name) {
+                    if ($('input[name="' + name + '"]:checked').length == 0) {
+                        radioError = true;
+                        var errid = 'errq' + (i+1);
+                        $("#"+errid).html("Przegapiłaś/eś to pytanie");
+                    }
+                    else {
+                          var errid = 'errq' + (i+1);
+                        $("#"+errid).html("");
+                        }
+                    var value = $('input[name=' + name + ']:radio:checked').val()
+                    if(value > 0){
+                            qnumbers.push(i+1);
+                    }
+                });
+                //check for error
+
+                $.each(qnumbers, function (i, name) {
+                    if ($('input[name="ans' + name + 'test"]:checked').length == 0) {
+                        radioError = true;
+                        var errid = 'erra' + qnumbers[i];
+                        $("#"+errid).html("Przegapiłaś/eś to pytanie");
+                    }
+                    else {
+                          var errid = 'erra' + qnumbers[i];
+                        $("#"+errid).html("");
+                        }
+                });
+
+                if(radioError) {
+                    alert("Nie wszystkie wymagane pola zostały uzupełnione!");
+                    return false;
+                }
+                return true;
+            });
+        });
+
+
       </script>
   </body>
 </html>
