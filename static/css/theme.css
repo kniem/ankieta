@@ -82,3 +82,8 @@ body {
     background-color: #eef;
     border-radius: 25px;
 }
+
+.btn-primary{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
