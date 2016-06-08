@@ -32,7 +32,7 @@ html{
 
 body {
   font-family: bitter, sans-serif;
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -56,11 +56,24 @@ body {
     padding-bottom: -5px;
 }
 
-.row {
-    border-bottom: solid 1px #cce;
-    padding-top: 20px;
-}
-
 .question-font{
     font-weight: bold;
+}
+
+.business-header {
+    height: 400px;
+    background: url('../img/network-people.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+}
+
+.img-center {
+    margin: 0 auto;
 }
