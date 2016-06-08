@@ -27,11 +27,12 @@
 }
 
 html{
-  font-family: "Bitter", sans-serif;
+  font-family: "Bitter";
+}
 
 body {
-  padding-top: 70px;
-  padding-bottom: 50px;
+  font-family: "Bitter";
+  padding-top: 60px;
 }
 
 .theme-dropdown .dropdown-menu {
