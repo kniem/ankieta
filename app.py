@@ -75,7 +75,7 @@ def mean_in_groups(ages, scores):
 @app.route("/")
 def welcome():
     fd_list = db.session.query(Formdata).all()
-    fd_list_older = db.session.query(Formdata).filter_by(Formdata.age > '3').all()
+    fd_list_older = db.session.query(Formdata).all()
     score = 0
     rows = 0
     for el in fd_list:
