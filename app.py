@@ -75,22 +75,22 @@ def mean_in_groups(ages, scores):
 @app.route("/")
 def welcome():
     fd_list = db.session.query(Formdata).all()
-    # fd_list_older = db.session.query(Formdata).filter_by(age>'3').all()
+    fd_list_older = db.session.query(Formdata).filter_by(Formdata.age > '3').all()
     score = 0
     rows = 0
     for el in fd_list:
         score += (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
                       int(el.q8) + int(el.q9) + int(el.q10))
         rows += 1
-    mean_score = score/rows
+    mean_score = format(score/rows, '.2f')
     rows = 0
     score = 0
 
-    # for el in fd_list_older:
-    #     score += (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
-    #               int(el.q8) + int(el.q9) + int(el.q10))
-    #     rows += 1
-    older_score = 0
+    for el in fd_list_older:
+        score += (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
+                  int(el.q8) + int(el.q9) + int(el.q10))
+        rows += 1
+    older_score = format(score/rows, '.2f')
 
     participants = db.session.query(Formdata).count()
     return render_template('welcome.html', no_of_participants=participants, mean=mean_score,
