@@ -78,6 +78,6 @@ body {
     margin: 0 auto;
 }
 
-.entry-button {
-    float: right;
+.front-col{
+    background-color: #ccc;
 }
