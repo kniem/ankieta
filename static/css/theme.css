@@ -79,5 +79,6 @@ body {
 }
 
 .front-col{
-    background-color: #ccc;
+    background-color: #dde;
+    border-radius: 25px;
 }
