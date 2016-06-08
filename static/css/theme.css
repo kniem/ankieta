@@ -1,37 +1,37 @@
 @font-face {
-    font-family: 'Bitter';
-    src: font_url('Bitter-Regular.otf') format('opentype');
+    font-family: bitter;
+    src: url('../fonts/Bitter-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bitter';
-    src: font_url('Bitter-Bold.otf') format('opentype');
+    font-family: bitter;
+    src: url('../fonts/Bitter-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Bitter';
-    src: font_url('Bitter-Italic.otf') format('opentype');
+    font-family: bitter;
+    src: url('../fonts/Bitter-Italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Bitter';
-    src: font_url('Bitter-BoldItalic.otf') format('opentype');
+    font-family: bitter;
+    src: url('../fonts/Bitter-BoldItalic.otf') format('opentype');
     font-weight: bold;
     font-style: italic;
 }
 
 html{
-  font-family: "Bitter";
+  font-family: bitter, sans-serif;
 }
 
 body {
-  font-family: "Bitter";
+  font-family: bitter, sans-serif;
   padding-top: 60px;
 }
 
