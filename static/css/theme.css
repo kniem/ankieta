@@ -61,8 +61,8 @@ body {
 }
 
 .business-header {
-    height: 400px;
-    background: url('../img/network-people.jpg') center center no-repeat scroll;
+    height: 350px;
+    background: url('../img/people-network.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
