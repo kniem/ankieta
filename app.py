@@ -74,7 +74,27 @@ def mean_in_groups(ages, scores):
 
 @app.route("/")
 def welcome():
-    return render_template('welcome.html')
+    fd_list = db.session.query(Formdata).all()
+    fd_list_older = db.session.query(Formdata).filter_by(age>'3').all()
+    score = 0
+    rows = 0
+    for el in fd_list:
+        score+=(int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
+                      int(el.q8) + int(el.q9) + int(el.q10))
+        rows+=1
+    mean_score = score/rows
+    rows = 0
+    score = 0
+
+    for el in fd_list_older:
+        score += (int(el.q1) + int(el.q2) + int(el.q3) + int(el.q4) + int(el.q5) + int(el.q6) + int(el.q7) +
+                  int(el.q8) + int(el.q9) + int(el.q10))
+        rows += 1
+    older_score = score/rows
+
+    participants = db.session.query(Formdata).count()
+    return render_template('welcome.html', no_of_participants=participants, mean=mean_score,
+                           older_mean=older_score)
 
 @app.route("/form")
 def show_form():
