@@ -52,7 +52,14 @@
     data1.addRows( {{ q1_data|tojson }} );
     var options1 = {
           title: 'Pytanie 1 - ASAP',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart1 = new google.visualization.PieChart(document.getElementById('donut1_div'));
         chart1.draw(data1, options1);
@@ -63,7 +70,14 @@
     data2.addRows( {{ q2_data|tojson }} );
     var options2 = {
           title: 'Pytanie 2 - TL;DR',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart2 = new google.visualization.PieChart(document.getElementById('donut2_div'));
         chart2.draw(data2, options2);
@@ -74,7 +88,14 @@
     data3.addRows( {{ q3_data|tojson }} );
     var options3 = {
           title: 'Pytanie 3 - DM me',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart3 = new google.visualization.PieChart(document.getElementById('donut3_div'));
         chart3.draw(data3, options3);
@@ -85,7 +106,14 @@
     data4.addRows( {{ q4_data|tojson }} );
     var options4 = {
           title: 'Pytanie 4 - IDK',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart4 = new google.visualization.PieChart(document.getElementById('donut4_div'));
         chart4.draw(data4, options4);
@@ -96,7 +124,14 @@
     data5.addRows( {{ q5_data|tojson }} );
     var options5 = {
           title: 'Pytanie 5 - ELI5',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart5 = new google.visualization.PieChart(document.getElementById('donut5_div'));
         chart5.draw(data5, options5);
@@ -107,7 +142,14 @@
     data6.addRows( {{ q6_data|tojson }} );
     var options6 = {
           title: 'Pytanie 6 - NMZC',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart6 = new google.visualization.PieChart(document.getElementById('donut6_div'));
         chart6.draw(data6, options6);
@@ -118,7 +160,14 @@
     data7.addRows( {{ q7_data|tojson }} );
     var options7 = {
           title: 'Pytanie 7 - JBC',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart7 = new google.visualization.PieChart(document.getElementById('donut7_div'));
         chart7.draw(data7, options7);
@@ -129,7 +178,14 @@
     data8.addRows( {{ q8_data|tojson }} );
     var options8 = {
           title: 'Pytanie 8 - JJ',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart8 = new google.visualization.PieChart(document.getElementById('donut8_div'));
         chart8.draw(data8, options8);
@@ -140,7 +196,14 @@
     data9.addRows( {{ q9_data|tojson }} );
     var options9 = {
           title: 'Pytanie 9 - OCB',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart9 = new google.visualization.PieChart(document.getElementById('donut9_div'));
         chart9.draw(data9, options9);
@@ -151,7 +214,14 @@
     data10.addRows( {{ q10_data|tojson }} );
     var options10 = {
           title: 'Pytanie 10 - ZW',
-          pieHole: 0.4,
+          pieHole: 0.6,
+          width: 400,
+          height: 400,
+          pieSliceTextStyle: {
+            color: 'black',
+          },
+          legend: 'bottom',
+          colors:['#1c2','#dd2','e22'],
         };
     var chart10 = new google.visualization.PieChart(document.getElementById('donut10_div'));
         chart10.draw(data10, options10);
@@ -165,9 +235,11 @@
           title: 'Wyniki w grupach wiekowych',
           bar: {groupWidth: "95%"},
           legend: { position: 'none' },
+          width: 400,
+          height: 400,
           axes: {
             x: {
-              0: { side: 'bottom', label: 'Wynik (pkt)'} // Top x-axis.
+              0: { side: 'bottom', label: 'Wynik (pkt)'}
             }
           },
           bars: 'horizontal',
