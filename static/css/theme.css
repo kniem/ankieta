@@ -91,6 +91,11 @@ body {
 .row{
     padding-top: 10px;
 }
+
 .row-form:hover {
   background-color: #f2f2f6;
+}
+
+.cont-form{
+    padding-bottom: 40px;
 }
