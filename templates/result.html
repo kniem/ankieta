@@ -162,8 +162,15 @@
     databar.addRows( {{ mean_data|tojson }} );
 
     var optionsbar = {
-          title: 'Wyniki w poszczególnych grupach wiekowych',
+          title: 'Wyniki w grupach wiekowych',
           bar: {groupWidth: "95%"},
+          legend: { position: 'none' },
+          axes: {
+            x: {
+              0: { side: 'bottom', label: 'Wynik (pkt)'} // Top x-axis.
+            }
+          },
+          bars: 'horizontal',
         };
 
     var chartbar = new google.visualization.BarChart(document.getElementById("bar_mean_div"));
