@@ -88,6 +88,9 @@ body {
     margin-bottom: 15px;
 }
 
+.row{
+    padding-top: 10px;
+}
 .row-form:hover {
-  background-color: #eeeef4;
+  background-color: #f2f2f6;
 }
