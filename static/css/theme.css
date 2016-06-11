@@ -88,14 +88,6 @@ body {
     margin-bottom: 15px;
 }
 
-.row{
-    padding-top: 10px;
-}
-
 .row-form:hover {
-  background-color: #f2f2f6;
-}
-
-.cont-form{
-    padding-bottom: 40px;
+  background-color: #eeeef4;
 }
