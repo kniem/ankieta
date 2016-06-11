@@ -92,7 +92,11 @@ body {
   background-color: #eeeef4;
 }
 
-.footer{
+footer{
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+.row-form{
+    padding-top: 10px;
 }
