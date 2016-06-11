@@ -50,7 +50,7 @@ db.create_all()
 
 
 def count_answers(arr):
-    return [['Nie znam', arr.count(0)], ['Nie jest pewien', arr.count(1)], ['Wiem', arr.count(2)]]
+    return [['0 pkt', arr.count(0)], ['1 pkt', arr.count(1)], ['2 pkt', arr.count(2)]]
 
 
 def check_answer(answer, correct_answer):
