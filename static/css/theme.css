@@ -88,6 +88,11 @@ body {
     margin-bottom: 15px;
 }
 
-.row-form:hover {
+.row-form:hover{
   background-color: #eeeef4;
+}
+
+.footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
