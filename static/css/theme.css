@@ -50,9 +50,9 @@ body {
 }
 
 .err-msg {
-    color: #cc1111;
+    color: #ee0e0e;
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: -5px;
 }
 
@@ -86,4 +86,8 @@ body {
 .btn-primary{
     margin-top: 7px;
     margin-bottom: 15px;
+}
+
+.row-form:hover {
+  background-color: #eeeef4;
 }
