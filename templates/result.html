@@ -9,15 +9,15 @@
 
 <div class="container-fluid">
     <div class="row"><h3>Wynik testu w zależności od wieku</h3>
-        <div class="col-md-4">
-            <h2>{{ max_string_result[0] }}</h2>
-            <p>{{ max_string_result[1] }} </p>
-        </div>
-        <div class="col-md-4">
-            <h2>{{ min_string_result[0] }}</h2>
-            <p>{{ min_string_result[1] }} </p>
-        </div>
         <div class="col-md-4" id="bar_mean_div" style="width: 400px; height: 400px;"></div>
+        <div class="col-md-4">
+            <p>Najlepszy średni wynik w grupie </p><h3>{{ max_string_result[0] }}</h3>
+            <h2>{{ max_string_result[1] }} / 20 pkt </h2>
+        </div>
+        <div class="col-md-4">
+            <p>Najgorszy średni wynik w grupie </p><h3>{{ max_string_result[0] }}</h3>
+            <h2>{{ max_string_result[1] }} / 20 pkt </h2>
+        </div>
     </div>
     <div class="row"><h3>Odpowiedzi na kolejne pytania</h3>
         <div class="col-md-4"><div id="donut1_div" style="width: 400px; height: 400px;"></div></div>
