@@ -61,7 +61,7 @@ def min_string(values):
     group_vector = ['do 15 lat', 'od 16 do 25 lat', 'od 26 do 35 lat', 'od 36 do 45 lat', 'powyżej 46 lat']
     i_min = index_min(values)
     age_string = str(group_vector[i_min])
-    score_string = str(format(values[i_min]), '.2f')
+    score_string = str(format(values[i_min], '.2f'))
     return age_string, score_string
 
 
@@ -69,7 +69,7 @@ def max_string(values):
     group_vector = ['do 15 lat', 'od 16 do 25 lat', 'od 26 do 35 lat', 'od 36 do 45 lat', 'powyżej 46 lat']
     i_max = index_max(values)
     age_string = str(group_vector[i_max])
-    score_string = str(format(values[i_max]), '.2f')
+    score_string = str(format(values[i_max], '.2f'))
     return age_string, score_string
 
 
