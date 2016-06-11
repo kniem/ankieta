@@ -9,8 +9,14 @@
 
 <div class="container-fluid">
     <div class="row"><h3>Wynik testu w zależności od wieku</h3><center>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2>{{ max_string_result[0] }}</h2>
+            <p>{{ max_string_results[1] }} </p>
+        </div>
+        <div class="col-md-4">
+            <h2>{{ min_string_result[0] }}</h2>
+            <p>{{ min_string_results[1] }} </p>
+        </div>
         <div class="col-md-4" id="bar_mean_div" style="width: 400px; height: 400px;"></div></center>
     </div>
     <div class="row"><h3>Odpowiedzi na kolejne pytania</h3>
@@ -60,7 +66,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
 
         };
@@ -81,7 +87,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart2 = new google.visualization.PieChart(document.getElementById('donut2_div'));
@@ -101,7 +107,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart3 = new google.visualization.PieChart(document.getElementById('donut3_div'));
@@ -121,7 +127,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart4 = new google.visualization.PieChart(document.getElementById('donut4_div'));
@@ -141,7 +147,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart5 = new google.visualization.PieChart(document.getElementById('donut5_div'));
@@ -161,7 +167,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart6 = new google.visualization.PieChart(document.getElementById('donut6_div'));
@@ -181,7 +187,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart7 = new google.visualization.PieChart(document.getElementById('donut7_div'));
@@ -201,7 +207,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart8 = new google.visualization.PieChart(document.getElementById('donut8_div'));
@@ -221,7 +227,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart9 = new google.visualization.PieChart(document.getElementById('donut9_div'));
@@ -241,7 +247,7 @@
           },
           legend: 'bottom',
           colors:['b22','cc2','1b2'],
-          slices: {  3: {offset: 0.2},
+          slices: {  2: {offset: 0.2},
           },
         };
     var chart10 = new google.visualization.PieChart(document.getElementById('donut10_div'));

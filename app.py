@@ -49,6 +49,30 @@ class Formdata(db.Model):
 db.create_all()
 
 
+def index_min(values):
+    return min(range(len(values)),key=values.__getitem__)
+
+
+def index_max(values):
+    return max(range(len(values)),key=values.__getitem__)
+
+
+def min_string(values):
+    group_vector = ['do 15 lat', 'od 16 do 25 lat', 'od 26 do 35 lat', 'od 36 do 45 lat', 'powyżej 46 lat']
+    i_min = index_min(values)
+    age_string = str(group_vector[i_min])
+    score_string = str(values[i_min])
+    return age_string, score_string
+
+
+def max_string(values):
+    group_vector = ['do 15 lat', 'od 16 do 25 lat', 'od 26 do 35 lat', 'od 36 do 45 lat', 'powyżej 46 lat']
+    i_max = index_max(values)
+    age_string = str(group_vector[i_max])
+    score_string = str(values[i_max])
+    return age_string, score_string
+
+
 def count_answers(arr):
     return [['0 pkt', arr.count(0)], ['1 pkt', arr.count(1)], ['2 pkt', arr.count(2)]]
 
@@ -154,12 +178,15 @@ def show_result():
     q10_data = count_answers(q10)
 
     mean_data_vector = mean_in_groups(age, score)
+    max_string_result = max_string(mean_data_vector)
+    min_string_result = min_string(mean_data_vector)
     mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
                  ['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
 
     return render_template('result.html', q1_data=q1_data, q2_data=q2_data, q3_data=q3_data, q4_data=q4_data,
                            q5_data=q5_data, q6_data=q6_data, q7_data=q7_data, q8_data=q8_data, q9_data=q9_data,
-                           q10_data=q10_data, mean_data=mean_data)
+                           q10_data=q10_data, mean_data=mean_data, max_string_result=max_string_result,
+                           min_string_result=min_string_result)
 
 
 @app.route("/save", methods=['POST'])
