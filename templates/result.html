@@ -9,7 +9,7 @@
 
 <div class="container-fluid">
     <div class="row"><h3>Wynik testu w zależności od wieku</h3>
-        <div class="col-md-4"><div id="bar_mean_div" style="width: 400px; height: 400px;"></div></div>
+        <div class="col-md-4"><div id="bar_mean_div" style="width: 320px; height: 320px;"></div></div>
         <div class="col-md-4 vertical-center">
             <div class="text-info">
                 <p>Najlepszy średni wynik w grupie </p><h3>{{ max_string_result[0] }}</h3>
@@ -24,9 +24,9 @@
         </div>
     </div>
     <div class="row"><h3>Odpowiedzi na kolejne pytania</h3>
-        <div class="col-md-4"><div id="donut1_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"><div id="donut2_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"><div id="bar_lang_div" style="width: 400px; height: 400px;"></div></div>
+        <div class="col-md-4"><div id="donut1_div" style="width: 320px; height: 320px;"></div></div>
+        <div class="col-md-4"><div id="donut2_div" style="width: 320px; height: 320px;"></div></div>
+        <div class="col-md-4"><div id="bar_lang_div" style="width: 320px; height: 320px;"></div></div>
     </div>
     <div class="row">
         <div class="col-md-4 vertical-center">
@@ -35,12 +35,12 @@
                 <h3>Średnia: {{ t_e_strings[1] }} / 2 pkt </h3>
             </div>
         </div>
-        <div class="col-md-4"><div id="donut3_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"><div id="donut4_div" style="width: 400px; height: 400px;"></div></div>
+        <div class="col-md-4"><div id="donut3_div" style="width: 320px; height: 320px;"></div></div>
+        <div class="col-md-4"><div id="donut4_div" style="width: 320px; height: 320px;"></div></div>
     </div>
     <div class="row">
-        <div class="col-md-4"><div id="donut5_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"><div id="donut6_div" style="width: 400px; height: 400px;"></div></div>
+        <div class="col-md-4"><div id="donut5_div" style="width: 320px; height: 320px;"></div></div>
+        <div class="col-md-4"><div id="donut6_div" style="width: 320px; height: 320px;"></div></div>
         <div class="col-md-4 vertical-center">
             <div class="text-info">
                 <p>Najłatwiejszy skrót </p><h2>{{ t_e_strings[2] }}</h2>
@@ -49,14 +49,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4"><div id="donut7_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"><div id="donut8_div" style="width: 400px; height: 400px;"></div></div>
+        <div class="col-md-6"><div id="donut7_div" style="width: 320px; height: 320px;"></div></div>
+        <div class="col-md-6"><div id="donut8_div" style="width: 320px; height: 320px;"></div></div>
     </div>
     <div class="row">
-        <div class="col-md-4"><div id="donut9_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"><div id="donut10_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-6"><div id="donut9_div" style="width: 320px; height: 320px;"></div></div>
+        <div class="col-md-6"><div id="donut10_div" style="width: 320px; height: 320px;"></div></div>
     </div>
 
 </div>
@@ -73,8 +71,8 @@
     var options1 = {
           title: 'Pytanie 1 - ASAP',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -94,8 +92,8 @@
     var options2 = {
           title: 'Pytanie 2 - TL;DR',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -114,8 +112,8 @@
     var options3 = {
           title: 'Pytanie 3 - DM me',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -134,8 +132,8 @@
     var options4 = {
           title: 'Pytanie 4 - IDK',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -154,8 +152,8 @@
     var options5 = {
           title: 'Pytanie 5 - ELI5',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -174,8 +172,8 @@
     var options6 = {
           title: 'Pytanie 6 - NMZC',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -194,8 +192,8 @@
     var options7 = {
           title: 'Pytanie 7 - JBC',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -214,8 +212,8 @@
     var options8 = {
           title: 'Pytanie 8 - JJ',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -234,8 +232,8 @@
     var options9 = {
           title: 'Pytanie 9 - OCB',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -254,8 +252,8 @@
     var options10 = {
           title: 'Pytanie 10 - ZW',
           pieHole: 0.6,
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           pieSliceTextStyle: {
             color: 'black',
           },
@@ -276,8 +274,8 @@
           title: 'Wyniki w grupach wiekowych',
           bar: {groupWidth: "95%"},
           legend: { position: 'none' },
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
           axes: {
             x: {
               0: { side: 'bottom', label: 'Wynik (pkt)'}
@@ -298,8 +296,8 @@
     var optionsbar_lang = {
           title: 'Język skrótu a wynik',
           legend: { position: 'none' },
-          width: 400,
-          height: 400,
+          width: 320
+          height: 320,
 
         };
 
