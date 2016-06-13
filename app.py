@@ -105,6 +105,16 @@ def mean_in_language(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
     return means
 
 
+def tough_easy_questions(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
+    total_points = [sum(q1), sum(q2), sum(q3), sum(q4), sum(q5), sum(q6), sum(q7), sum(q8), sum(q9), sum(q10)]
+    toughest_q = index_min(total_points)
+    easiest_q = index_max(total_points)
+    q_list = ['ASAP', 'TL;DR', 'DM me', 'IDK', 'ELI5', 'NMZC', 'JBC', 'JJ', 'OCB', 'ZW']
+    toughest_pts = str(format(total_points[toughest_q], '.2f'))
+    easiest_pts = str(format(total_points[easiest_q], '.2f'))
+    return q_list[toughest_q], toughest_pts, q_list[easiest_q], easiest_pts
+
+
 @app.route("/")
 def welcome():
     fd_list = db.session.query(Formdata).all()
@@ -190,6 +200,7 @@ def show_result():
     mean_data_lang_vector = mean_in_language(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     max_string_result = max_string(mean_data_vector)
     min_string_result = min_string(mean_data_vector)
+    t_e_strings = tough_easy_questions(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
                  ['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
     mean_data_lang = [['Angielskie', mean_data_lang_vector[0]], ['Polskie', mean_data_lang_vector[1]]]
@@ -197,7 +208,8 @@ def show_result():
     return render_template('result.html', q1_data=q1_data, q2_data=q2_data, q3_data=q3_data, q4_data=q4_data,
                            q5_data=q5_data, q6_data=q6_data, q7_data=q7_data, q8_data=q8_data, q9_data=q9_data,
                            q10_data=q10_data, mean_data=mean_data, max_string_result=max_string_result,
-                           min_string_result=min_string_result, mean_data_lang=mean_data_lang)
+                           min_string_result=min_string_result, mean_data_lang=mean_data_lang,
+                           t_e_strings=t_e_strings)
 
 
 @app.route("/save", methods=['POST'])
