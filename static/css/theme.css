@@ -104,3 +104,7 @@ footer{
 .vertical-center {
   padding-top: 125px;
 }
+
+.text-info {
+  text-align: center;
+}
