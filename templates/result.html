@@ -278,7 +278,7 @@
 
     var chartbar = new google.visualization.BarChart(document.getElementById("bar_mean_div"));
       chartbar.draw(databar, optionsbar);
-  
+
 
   var databar_lang = new google.visualization.DataTable();
     databar_lang.addColumn('string', 'Język');
@@ -287,15 +287,9 @@
 
     var optionsbar_lang = {
           title: 'Język skrótu a wynik',
-          bar: {groupWidth: "95%"},
           legend: { position: 'none' },
           width: 400,
           height: 400,
-          axes: {
-            x: {
-              0: { side: 'bottom', label: 'Wynik (pkt)'}
-            }
-          },
           bars: 'vertical',
         };
 
