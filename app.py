@@ -96,6 +96,17 @@ def mean_in_groups(ages, scores):
     means = aggregates
     return means
 
+
+def mean_in_language(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
+    answers = len(q1)
+    english = (sum(q1) + sum(q2) + sum(q3) + sum(q4) + sum(q5))/answers
+    polish = (sum(q6) + sum(q7) + sum(q8) + sum(q9) + sum(q10))/answers
+    english_str = str(format(english, '.2f'))
+    polish_str = str(format(polish, '.2f'))
+    means = [english_str, polish_str]
+    return means
+
+
 @app.route("/")
 def welcome():
     fd_list = db.session.query(Formdata).all()
@@ -178,15 +189,17 @@ def show_result():
     q10_data = count_answers(q10)
 
     mean_data_vector = mean_in_groups(age, score)
+    mean_data_lang_vector = mean_in_language(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10)
     max_string_result = max_string(mean_data_vector)
     min_string_result = min_string(mean_data_vector)
     mean_data = ([['<=15', mean_data_vector[0]], ['16-25', mean_data_vector[1]], ['26-35', mean_data_vector[2]],
                  ['36-45', mean_data_vector[3]], ['>=46', mean_data_vector[4]]])
+    mean_data_lang = [['Angielskie', mean_data_lang_vector[0]], ['Polskie', mean_data_lang_vector[1]]]
 
     return render_template('result.html', q1_data=q1_data, q2_data=q2_data, q3_data=q3_data, q4_data=q4_data,
                            q5_data=q5_data, q6_data=q6_data, q7_data=q7_data, q8_data=q8_data, q9_data=q9_data,
                            q10_data=q10_data, mean_data=mean_data, max_string_result=max_string_result,
-                           min_string_result=min_string_result)
+                           min_string_result=min_string_result, mean_data_lang=mean_data_lang)
 
 
 @app.route("/save", methods=['POST'])

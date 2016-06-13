@@ -26,7 +26,7 @@
     <div class="row"><h3>Odpowiedzi na kolejne pytania</h3>
         <div class="col-md-4"><div id="donut1_div" style="width: 400px; height: 400px;"></div></div>
         <div class="col-md-4"><div id="donut2_div" style="width: 400px; height: 400px;"></div></div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4"><div id="bar_lang_div" style="width: 400px; height: 400px;"></div></div>
     </div>
     <div class="row">
         <div class="col-md-4"></div>
@@ -278,6 +278,29 @@
 
     var chartbar = new google.visualization.BarChart(document.getElementById("bar_mean_div"));
       chartbar.draw(databar, optionsbar);
+  }
+
+  var databar_lang = new google.visualization.DataTable();
+    databar_lang.addColumn('string', 'Język');
+    databar_lang.addColumn('number', 'Średni wynik');
+    databar_lang.addRows( {{ mean_data_lang|tojson }} );
+
+    var optionsbar_lang = {
+          title: 'Język skrótu a wynik',
+          bar: {groupWidth: "95%"},
+          legend: { position: 'none' },
+          width: 400,
+          height: 400,
+          axes: {
+            x: {
+              0: { side: 'bottom', label: 'Wynik (pkt)'}
+            }
+          },
+          bars: 'vertical',
+        };
+
+    var databar_lang = new google.visualization.BarChart(document.getElementById("bar_lang_div"));
+      databar_lang.draw(databar_lang, optionsbar_lang);
   }
 
 
