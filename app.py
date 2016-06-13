@@ -107,8 +107,8 @@ def mean_in_language(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
 
 def tough_easy_questions(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
     total_points = [sum(q1), sum(q2), sum(q3), sum(q4), sum(q5), sum(q6), sum(q7), sum(q8), sum(q9), sum(q10)]
-    answers = len(q1)
-    total_points /= answers
+    # answers = len(q1)
+    # total_points /= answers
     toughest_q = index_min(total_points)
     easiest_q = index_max(total_points)
     q_list = ['ASAP', 'TL;DR', 'DM me', 'IDK', 'ELI5', 'NMZC', 'JBC', 'JJ', 'OCB', 'ZW']
