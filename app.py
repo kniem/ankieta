@@ -101,9 +101,7 @@ def mean_in_language(q1, q2, q3, q4, q5, q6, q7, q8, q9, q10):
     answers = len(q1)
     english = (sum(q1) + sum(q2) + sum(q3) + sum(q4) + sum(q5))/answers
     polish = (sum(q6) + sum(q7) + sum(q8) + sum(q9) + sum(q10))/answers
-    english_str = str(format(english, '.2f'))
-    polish_str = str(format(polish, '.2f'))
-    means = [english_str, polish_str]
+    means = [round(english, 2), round(polish, 2)]
     return means
 
 
